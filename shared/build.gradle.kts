@@ -181,26 +181,6 @@ compose.resources {
     generateResClass = always
 }
 
-//tasks.matching { it.name.contains("generateComposeResClass") }.configureEach {
-//    doFirst {
-//        // Force consistent ordering by sorting resource directories
-//        val resourceDirs = project.file("src/commonMain/composeResources")
-//            .listFiles { file -> file.isDirectory && file.name.startsWith("values") }
-//            ?.sortedBy { it.name }
-//
-//        // Set system property to ensure consistent processing
-//        System.setProperty("compose.resources.processing.order",
-//            resourceDirs?.joinToString(",") { it.name } ?: "")
-//    }
-//}
-
-tasks.matching { it.name.contains("generateComposeResClass") }.configureEach {
-    doFirst {
-        System.setProperty("kotlin.collections.hash.seed", "0")
-        System.setProperty("java.util.HashMap.randomSeed", "0")
-    }
-}
-
 sqldelight {
     database("NoteDatabase") {
         packageName = "com.module.notelycompose.database"
