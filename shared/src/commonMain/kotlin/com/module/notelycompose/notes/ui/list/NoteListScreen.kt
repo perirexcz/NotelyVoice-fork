@@ -49,6 +49,7 @@ fun NoteListScreen(
     navigateToSettings: () -> Unit,
     navigateToMenu: () -> Unit,
     navigateToNoteDetails: (String) -> Unit,
+    navigateToExportNotes: () -> Unit,
     viewModel: NoteListViewModel = koinViewModel(),
     exportViewModel: ExportSelectionViewModel = koinViewModel(),
     platformUiState: PlatformUiState
@@ -161,11 +162,13 @@ fun NoteListScreen(
     ExportSelectedItemConfirmationDialog(
         showExportNotesConfirmDialog = showExportNotesConfirmDialog,
         onExport = { exportAudio, exportTxt, exportMd ->
+
             exportViewModel.onUpdateExportOptions(
                 exportAudio,
                 exportTxt,
                 exportMd
             )
+            navigateToExportNotes()
         },
         onDismiss = {
             showExportNotesConfirmDialog = false
