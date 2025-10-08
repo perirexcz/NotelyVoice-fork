@@ -43,8 +43,10 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.module.notelycompose.modelDownloader.HINDI_MODEL_SELECTION
 import com.module.notelycompose.modelDownloader.NO_MODEL_SELECTION
 import com.module.notelycompose.modelDownloader.OPTIMIZED_MODEL_SELECTION
+import com.module.notelycompose.modelDownloader.STANDARD_MODEL_SELECTION
 import com.module.notelycompose.notes.extension.TEXT_SIZE_BODY
 import com.module.notelycompose.notes.extension.intBodyFontSizes
 import com.module.notelycompose.notes.ui.theme.LocalCustomColors
@@ -586,21 +588,34 @@ private fun LanguageModelSelectionSection(
         )
 
         SettingsModelOptionCard(
-            model = if(modelSavedSelection == OPTIMIZED_MODEL_SELECTION) {
-                ModelOption(
-                    title = "Optimized model (multilingual)",
-                    description = "Highest accuracy available\n" +
-                            "Supports Hindi and all other languages\n" +
-                            "Larger file size, slower performance",
-                    size = "139 MB"
-                )
-            } else {
-                ModelOption(
-                    title = "Standard model (multilingual)",
-                    description = "Faster performance and smaller file size\n" +
-                            "Supports multiple languages except Hindi",
-                    size = "139 MB"
-                )
+            model = when (modelSavedSelection) {
+                OPTIMIZED_MODEL_SELECTION -> {
+                    ModelOption(
+                        title = "Optimized model (multilingual)",
+                        description = "Highest accuracy available\n" +
+                                "Supports English and all other languages\n" +
+                                "Larger file size, slower performance",
+                        size = "468 MB"
+                    )
+                }
+                HINDI_MODEL_SELECTION -> {
+                    ModelOption(
+                        title = "Hindi & Gujarati model (multilingual)",
+                        description = "Highest accuracy available\n" +
+                                "Supports Hindi and Gujarati\n" +
+                                "Larger file size, slower performance",
+                        size = "139 MB"
+                    )
+                }
+                else -> {
+                    ModelOption(
+                        title = "Optimized model (multilingual)",
+                        description = "Highest accuracy available\n" +
+                                "Supports all languages\n" +
+                                "Smaller file size, slower performance",
+                        size = "142 MB"
+                    )
+                }
             },
             onClick = {
                 navigateToModelSelection()

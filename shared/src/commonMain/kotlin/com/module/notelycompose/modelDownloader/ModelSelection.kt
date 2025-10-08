@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.first
 const val NO_MODEL_SELECTION = -1
 const val STANDARD_MODEL_SELECTION = 0
 const val OPTIMIZED_MODEL_SELECTION = 1
+const val HINDI_MODEL_SELECTION = 2
 
 data class TranscriptionModel(val name:String, val size:String, val description:String, val url:String){
     fun getModelDownloadMessage():String = "File size: approximately $size\n$description"
@@ -24,9 +25,15 @@ class ModelSelection(private val preferencesRepository: PreferencesRepository) {
             "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base-en.bin"
         ),
         TranscriptionModel(
+            "ggml-small.bin",
+            "468 MB",
+            "Multilingual model (slower, more-accurate)",
+            "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-small.bin"
+        ),
+        TranscriptionModel(
             "ggml-base-hi.bin",
             "140 MB",
-            "Multilingual model (supports 50+ languages)",
+            "Hindi & Gujarati model (fast, hindi focused)",
             "https://huggingface.co/khidrew/whisper-base-hindi-ggml/resolve/main/ggml-base-hi.bin"
         )
     )
@@ -39,6 +46,7 @@ class ModelSelection(private val preferencesRepository: PreferencesRepository) {
         val defaultLanguage = preferencesRepository.getDefaultTranscriptionLanguage().first()
         return when (defaultLanguage) {
             "en" -> models[0]
+            "hi" -> models[2]
             else -> models[1]
         }
     }

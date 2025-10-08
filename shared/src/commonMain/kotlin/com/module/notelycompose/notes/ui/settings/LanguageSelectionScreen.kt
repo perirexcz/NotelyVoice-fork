@@ -74,6 +74,7 @@ val languageCodeMap = mapOf(
     "ko" to "Korean",
     "ms" to "Malay",
     "no" to "Norwegian",
+    "fa" to "Persian (Farsi)",
     "pl" to "Polish",
     "pt" to "Portuguese",
     "ru" to "Russian",
