@@ -3,9 +3,9 @@
 [![Kotlin](https://img.shields.io/badge/kotlin-2.1.21-blue.svg?logo=kotlin)](http://kotlinlang.org)
 [![Compose](https://img.shields.io/badge/compose-1.8.0-blue.svg?logo=jetpackcompose)](https://www.jetbrains.com/lp/compose-multiplatform)
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
-[![](https://hosted.weblate.org/widget/notelyvoice/svg-badge.svg)](https://hosted.weblate.org/projects/notelyvoice/)
+[![](https://hosted.weblate.org/widget/notelyvoice/svg-badge.svg)](https://hosted.weblate.org/engage/notelyvoice/)
 
-A completely free modern, cross-platform note-taking application with powerful Whisper AI Voice to Text capabilities built with Compose Multiplatform.
+A completely free, modern, cross-platform, 100% private AI voice transcription & note-taking application with powerful Whisper AI Voice to Text capabilities built with Compose Multiplatform.
 
 Perfect for students capturing lectures, professionals documenting meetings, doctors recording patient notes, researchers transcribing interviews, and anyone needing accessible hands-free note-taking across all their devices.
 
@@ -14,7 +14,7 @@ Perfect for students capturing lectures, professionals documenting meetings, doc
 <a href="https://f-droid.org/en/packages/com.module.notelycompose.android">
     <img alt="Get it on F-Droid" height="64" src="https://raw.githubusercontent.com/anwilli5/coin-collection-android-US/main/images/fdroid-repo-badge.png" />
 </a>
-<a href="https://play.google.com/store/apps/details?id=com.module.notelycompose.android&hl=en&gl=us">
+<a href="https://play.google.com/store/apps/details?id=com.module.notelycompose.android">
     <img alt="Get it on Google Play" height="64" src="https://raw.githubusercontent.com/anwilli5/coin-collection-android-US/main/images/google-play-badge.png" />
 </a>
 <a href="https://apps.apple.com/us/app/notely-voice-speech-to-text/id6745835691">
@@ -23,7 +23,7 @@ Perfect for students capturing lectures, professionals documenting meetings, doc
 </div>
 
 ## Translations
-This project uses [Weblate](https://hosted.weblate.org/projects/notelyvoice/) for translation management. Help us translate NotelyVoice into your language!
+This project uses [Weblate](https://hosted.weblate.org/engage/notelyvoice/) for translation management. Help us translate NotelyVoice into your language!
 <br/>
 
 ## Screenshots

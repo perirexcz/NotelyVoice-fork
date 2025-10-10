@@ -71,6 +71,7 @@ import com.module.notelycompose.modelDownloader.DownloaderEffect
 import com.module.notelycompose.modelDownloader.ModelDownloaderViewModel
 import com.module.notelycompose.audio.presentation.AudioImportViewModel
 import com.module.notelycompose.audio.ui.importing.ImportingAudioStateHost
+import com.module.notelycompose.modelDownloader.ModelSelection
 import com.module.notelycompose.notes.presentation.detail.TextEditorViewModel
 import com.module.notelycompose.notes.ui.share.ShareDialog
 import com.module.notelycompose.notes.ui.theme.LocalCustomColors
@@ -86,6 +87,7 @@ import com.module.notelycompose.resources.vectors.Images
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
+import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -100,7 +102,8 @@ fun NoteDetailScreen(
     downloaderViewModel: ModelDownloaderViewModel = koinViewModel(),
     platformViewModel: PlatformViewModel = koinViewModel(),
     audioImportViewModel: AudioImportViewModel = koinViewModel(),
-    editorViewModel: TextEditorViewModel
+    editorViewModel: TextEditorViewModel,
+    modelSelection: ModelSelection = koinInject()
 ) {
     val currentNoteId by editorViewModel.currentNoteId.collectAsStateWithLifecycle()
     val importingState by audioImportViewModel.importingAudioState.collectAsStateWithLifecycle()
@@ -171,9 +174,16 @@ fun NoteDetailScreen(
                     audioPlayerViewModel.releasePlayer()
                     audioImportViewModel.importAudio()
                 },
+                onImportVideoClick = {
+                    audioPlayerViewModel.releasePlayer()
+                    audioImportViewModel.importVideo()
+                },
                 isRecordingExist = editorState.recording.isRecordingExist,
                 onExportTextAsTxt = {
                     platformViewModel.onExportTextAsTxt(editorState.content.text)
+                },
+                onExportTextAsPDF = {
+                    platformViewModel.onExportTextAsPDF(editorState.content.text)
                 }
             )
         },
@@ -257,7 +267,7 @@ fun NoteDetailScreen(
     if (showDownloadDialog) {
         LocalSoftwareKeyboardController.current?.hide()
         DownloaderDialog(
-            modifier = Modifier.height(100.dp),
+            transcriptionModel = downloaderUiState.selectedModel,
             downloaderUiState,
             onDismiss = { showDownloadDialog = false }
         )
@@ -266,11 +276,12 @@ fun NoteDetailScreen(
     if (showErrorDialog) {
         LocalSoftwareKeyboardController.current?.hide()
         AlertDialog(
-            modifier = Modifier.height(100.dp),
+            modifier = Modifier.height(120.dp),
             title = { Text(stringResource(resource = Res.string.download_dialog_error)) },
             onDismissRequest = { showErrorDialog = false },
             buttons = {
                 Button(
+                    modifier = Modifier.padding(vertical = 12.dp, horizontal = 24.dp),
                     onClick = {
                         showErrorDialog = false
                     },
@@ -287,7 +298,8 @@ fun NoteDetailScreen(
             },
             onCancel = {
                 showDownloadQuestionDialog = false
-            }
+            },
+            transcriptionModel = downloaderUiState.selectedModel
         )
     }
 
