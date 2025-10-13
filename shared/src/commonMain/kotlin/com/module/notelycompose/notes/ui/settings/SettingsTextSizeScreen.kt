@@ -20,10 +20,12 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.module.notelycompose.notes.extension.intBodyFontSizes
+import com.module.notelycompose.notes.presentation.detail.TextEditorViewModel
 import com.module.notelycompose.notes.ui.detail.AndroidNoteTopBar
 import com.module.notelycompose.notes.ui.detail.IOSNoteTopBar
 import com.module.notelycompose.notes.ui.theme.LocalCustomColors
@@ -33,6 +35,7 @@ import com.module.notelycompose.resources.Res
 import com.module.notelycompose.resources.accessibility_a
 import com.module.notelycompose.resources.accessibility_desc
 import com.module.notelycompose.resources.accessibility_example
+import com.module.notelycompose.resources.body_text_default
 import com.module.notelycompose.resources.accessibility_default
 import com.module.notelycompose.resources.body_text_size
 import com.module.notelycompose.resources.recording_ui_checkmark

@@ -174,6 +174,10 @@ fun NoteDetailScreen(
                     audioPlayerViewModel.releasePlayer()
                     audioImportViewModel.importAudio()
                 },
+                onImportVideoClick = {
+                    audioPlayerViewModel.releasePlayer()
+                    audioImportViewModel.importVideo()
+                },
                 isRecordingExist = editorState.recording.isRecordingExist,
                 onExportTextAsTxt = {
                     platformViewModel.onExportTextAsTxt(editorState.content.text)
@@ -272,11 +276,12 @@ fun NoteDetailScreen(
     if (showErrorDialog) {
         LocalSoftwareKeyboardController.current?.hide()
         AlertDialog(
-            modifier = Modifier.height(100.dp),
+            modifier = Modifier.height(120.dp),
             title = { Text(stringResource(resource = Res.string.download_dialog_error)) },
             onDismissRequest = { showErrorDialog = false },
             buttons = {
                 Button(
+                    modifier = Modifier.padding(vertical = 12.dp, horizontal = 24.dp),
                     onClick = {
                         showErrorDialog = false
                     },

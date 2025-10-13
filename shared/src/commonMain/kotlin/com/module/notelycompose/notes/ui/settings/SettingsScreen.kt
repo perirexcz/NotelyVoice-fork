@@ -39,8 +39,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.module.notelycompose.modelDownloader.NO_MODEL_SELECTION
-import com.module.notelycompose.modelDownloader.OPTIMIZED_MODEL_SELECTION
 import com.module.notelycompose.notes.extension.TEXT_SIZE_BODY
 import com.module.notelycompose.notes.extension.intBodyFontSizes
 import com.module.notelycompose.notes.ui.theme.LocalCustomColors
@@ -62,18 +60,28 @@ import com.module.notelycompose.resources.theme
 import com.module.notelycompose.resources.choose_how_the_app_looks
 import com.module.notelycompose.resources.close
 import com.module.notelycompose.resources.accessibility
+import com.module.notelycompose.resources.batch_export_settings_how_to
+import com.module.notelycompose.resources.batch_export_settings_how_to_1
+import com.module.notelycompose.resources.batch_export_settings_how_to_2
+import com.module.notelycompose.resources.batch_export_settings_how_to_3
+import com.module.notelycompose.resources.batch_export_settings_how_to_description_1
+import com.module.notelycompose.resources.batch_export_settings_how_to_description_2
+import com.module.notelycompose.resources.batch_export_settings_how_to_description_3
+import com.module.notelycompose.resources.batch_export_settings_how_to_description_4
+import com.module.notelycompose.resources.batch_export_settings_title
 import com.module.notelycompose.resources.body_text_default
 import com.module.notelycompose.resources.body_text_preferred_text
 import com.module.notelycompose.resources.body_text_size
+import com.module.notelycompose.resources.export
+import com.module.notelycompose.resources.ic_export_selections
 import com.module.notelycompose.resources.navigate
-import com.module.notelycompose.resources.transcription_model_selection
+import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun SettingsScreen(
     navigateBack: () -> Unit,
     navigateToLanguages: () -> Unit,
     navigateToSettingsText: () -> Unit,
-    navigateToModelSelection: () -> Unit,
     preferencesRepository: PreferencesRepository = koinInject()
 ) {
     val language by preferencesRepository.getDefaultTranscriptionLanguage()
@@ -81,8 +89,6 @@ fun SettingsScreen(
     val uiMode by preferencesRepository.getTheme().collectAsState(Theme.SYSTEM.name)
     val coroutineScope = rememberCoroutineScope()
     val bodyTextSize = preferencesRepository.getBodyTextSize().collectAsState(TEXT_SIZE_BODY).value
-    val modelSavedSelection = preferencesRepository.getModelSelection().collectAsState(
-        NO_MODEL_SELECTION).value
 
     Column(
         modifier = Modifier
@@ -107,13 +113,6 @@ fun SettingsScreen(
             }
 
             item {
-                LanguageModelSelectionSection(
-                    navigateToModelSelection = navigateToModelSelection,
-                    modelSavedSelection = modelSavedSelection
-                )
-            }
-
-            item {
                 AppearanceSection(
                     selectedTheme = Theme.valueOf(uiMode),
                     onThemeSelected = {
@@ -122,6 +121,10 @@ fun SettingsScreen(
                         }
                     }
                 )
+            }
+
+            item {
+                ExportSettingSection()
             }
 
             item {
@@ -564,19 +567,12 @@ fun TextSizeSettingItem(
 }
 
 @Composable
-private fun LanguageModelSelectionSection(
-    navigateToModelSelection: () -> Unit,
-    modelSavedSelection: Int
-) {
-    Column(
-        modifier = Modifier.clickable {
-            navigateToModelSelection()
-        }
-    ) {
+fun ExportSettingSection() {
+    Column {
         Text(
-            text = stringResource(Res.string.transcription_model_selection),
+            text = stringResource(Res.string.batch_export_settings_title),
             fontSize = 24.sp,
-            fontWeight = FontWeight.Bold,
+            fontWeight = FontWeight.Medium,
             color = LocalCustomColors.current.bodyContentColor,
             modifier = Modifier.padding(bottom = 12.dp)
         )
@@ -628,32 +624,189 @@ fun SettingsModelOptionCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(20.dp),
-            verticalAlignment = Alignment.CenterVertically
+                .border(
+                    1.dp,
+                    LocalCustomColors.current.settingsBodyBorderColor,
+                    RoundedCornerShape(12.dp)
+                ),
+            colors = CardDefaults.cardColors(
+                containerColor = LocalCustomColors.current.bodyBackgroundColor
+            ),
+            elevation = CardDefaults.cardElevation(
+                defaultElevation = 0.dp
+            )
         ) {
             Column(
-                modifier = Modifier.weight(1f)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp)
             ) {
-                Text(
-                    text = model.title,
-                    fontSize = 18.sp,
-                    fontWeight = FontWeight.SemiBold,
-                    color = LocalCustomColors.current.bodyContentColor,
-                    modifier = Modifier.padding(bottom = 4.dp)
-                )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    verticalAlignment = Alignment.Top
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .size(40.dp)
+                            .background(
+                                Color(0xFF6366F1).copy(alpha = 0.1f),
+                                RoundedCornerShape(8.dp)
+                            ),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = "👆",
+                            fontSize = 20.sp
+                        )
+                    }
 
-                Text(
-                    text = model.description,
-                    fontSize = 14.sp,
-                    color = LocalCustomColors.current.modelSelectionDescColor,
-                    modifier = Modifier.padding(bottom = 8.dp)
-                )
+                    Column(
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Text(
+                            text = stringResource(Res.string.batch_export_settings_how_to_description_1),
+                            fontSize = 14.sp,
+                            color = LocalCustomColors.current.settingsBodyTextColor,
+                            lineHeight = 20.sp
+                        )
+                    }
+                }
 
-                Text(
-                    text = model.size,
-                    fontSize = 14.sp,
-                    color = LocalCustomColors.current.modelSelectionDescColor
-                )
+                Spacer(modifier = Modifier.height(12.dp))
+
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(
+                            LocalCustomColors.current.settingsBodyBorderColor.copy(alpha = 0.1f),
+                            RoundedCornerShape(8.dp)
+                        )
+                        .padding(12.dp)
+                ) {
+                    Column(
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(
+                                text = stringResource(Res.string.batch_export_settings_how_to_1),
+                                fontSize = 12.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = LocalCustomColors.current.bodyContentColor
+                            )
+
+                            Box(
+                                modifier = Modifier
+                                    .size(24.dp)
+                                    .background(
+                                        Color(0xFFCD9777),
+                                        RoundedCornerShape(4.dp)
+                                    )
+                            )
+
+                            Text(
+                                text = stringResource(Res.string.batch_export_settings_how_to_description_2),
+                                fontSize = 12.sp,
+                                color = LocalCustomColors.current.settingsBodyTextColor
+                            )
+                        }
+
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(
+                                text = stringResource(Res.string.batch_export_settings_how_to_2),
+                                fontSize = 12.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = LocalCustomColors.current.bodyContentColor
+                            )
+
+                            Row(
+                                horizontalArrangement = Arrangement.spacedBy(4.dp)
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .size(16.dp)
+                                        .background(
+                                            Color(0xFFCD9777),
+                                            RoundedCornerShape(2.dp)
+                                        ),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        text = "✓",
+                                        fontSize = 10.sp,
+                                        color = Color.White
+                                    )
+                                }
+                                Box(
+                                    modifier = Modifier
+                                        .size(16.dp)
+                                        .background(
+                                            Color(0xFFCD9777),
+                                            RoundedCornerShape(2.dp)
+                                        ),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        text = "✓",
+                                        fontSize = 10.sp,
+                                        color = Color.White
+                                    )
+                                }
+
+                                Text(
+                                    text = stringResource(Res.string.batch_export_settings_how_to_description_3),
+                                    fontSize = 12.sp,
+                                    color = LocalCustomColors.current.settingsBodyTextColor
+                                )
+                            }
+                        }
+
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(
+                                text = stringResource(Res.string.batch_export_settings_how_to_3),
+                                fontSize = 12.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = LocalCustomColors.current.bodyContentColor
+                            )
+
+                            Row(
+                                horizontalArrangement = Arrangement.spacedBy(4.dp)
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .size(16.dp)
+                                        .background(
+                                            Color(0xFFCD9777),
+                                            RoundedCornerShape(2.dp)
+                                        ),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    androidx.compose.material.Icon(
+                                        painter = painterResource(Res.drawable.ic_export_selections),
+                                        contentDescription = stringResource(Res.string.export),
+                                        tint = Color.White,
+                                        modifier = Modifier.size(10.dp)
+                                    )
+                                }
+                            }
+
+                            Text(
+                                text = stringResource(Res.string.batch_export_settings_how_to_description_4),
+                                fontSize = 12.sp,
+                                color = LocalCustomColors.current.settingsBodyTextColor
+                            )
+                        }
+                    }
+                }
             }
         }
     }
