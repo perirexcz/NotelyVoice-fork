@@ -1,9 +1,11 @@
 package com.module.notelycompose.notes.ui.settings
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
@@ -16,9 +18,14 @@ import com.module.notelycompose.notes.ui.detail.IOSNoteTopBar
 import com.module.notelycompose.notes.ui.theme.LocalCustomColors
 import com.module.notelycompose.onboarding.data.PreferencesRepository
 import com.module.notelycompose.platform.getPlatform
+import com.module.notelycompose.resources.Res
+import com.module.notelycompose.resources.ic_question_mark
+import com.module.notelycompose.resources.question_mark
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 
 private const val HIDE_TIME_ELAPSE = 1500L
@@ -32,6 +39,7 @@ data class ModelOption(
 @Composable
 fun ModelSelectionScreen(
     navigateBack: () -> Unit,
+    navigateToModelExplanation: () -> Unit,
     preferencesRepository: PreferencesRepository = koinInject()
 ) {
     val modelOptions = listOf(
@@ -42,7 +50,7 @@ fun ModelSelectionScreen(
         ),
         ModelOption(
             title = "Optimized Model (Multilingual)",
-            description = "Highest accuracy available\nSupports all languages except Hindi & Gujarati\nLarger file size, slower performance",
+            description = "Highest accuracy available\nLarger file size, slower performance\nSupports all languages except Hindi/Gujarati",
             size = "488 MB"
         )
     )
@@ -86,13 +94,27 @@ fun ModelSelectionScreen(
             )
 
             // Subtitle
-            Text(
-                text = "AI Model",
-                fontSize = 20.sp,
-                fontWeight = FontWeight.SemiBold,
-                color = LocalCustomColors.current.bodyContentColor,
-                modifier = Modifier.padding(bottom = 8.dp)
-            )
+            Row(
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "AI Model",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = LocalCustomColors.current.bodyContentColor,
+
+                )
+                Icon(
+                    painter = painterResource(Res.drawable.ic_question_mark),
+                    contentDescription = stringResource(Res.string.question_mark),
+                    modifier = Modifier
+                        .clickable {
+                            navigateToModelExplanation()
+                        }
+                        .size(32.dp).padding(start = 8.dp),
+                    tint = LocalCustomColors.current.bodyContentColor
+                )
+            }
 
             // Description
             Text(
