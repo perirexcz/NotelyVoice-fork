@@ -196,4 +196,12 @@
     <string name="standard_model_description">این گزینه سریع‌تر و سبک‌تر است که برای استفاده روزمره مناسب است. به سرعت گفتار شما را به متن تبدیل می‌کند و فضای زیادی در تلفن شما اشغال نمی‌کند. عالی است اگر نتایج سریع می‌خواهید و از چندین زبان استفاده می‌کنید. مانند یک خودروی کوچک فکر کنید - کارآمد و کار را انجام می‌دهد.</string>
     <string name="optimized_model_title">مدل بهینه‌شده (چندزبانه)</string>
     <string name="optimized_model_description">این گزینه قدرتمندتر است که دقیق‌ترین رونوشت‌هایممکن را به شما ارائه می‌دهد. کمی بیشتر طول می‌کشد و فضای ذخیره‌سازی بیشتری استفاده می‌کند، اما کلمات بیشتری را به درستی می‌گیرد، به‌ویژه با لهجه‌ها یا نویز پس‌زمینه. مانند یک خودروی لوکس - بزرگ‌تر و کندتر، اما کیفیت ممتاز ارائه می‌دهد. توجه: از هندی/گجراتی پشتیبانی نمی‌کند.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">عملکرد سریع‌تر و حجم فایل کوچک‌تر\nپشتیبانی از همه زبان‌ها</string>
+    <string name="optimized_model_setting_desc">بالاترین دقت موجود\nحجم فایل بزرگ‌تر، عملکرد کندتر\nپشتیبانی از همه زبان‌ها به جز هندی/گجراتی</string>
+    <string name="standard_model_setting_size">۱۴۲ مگابایت</string>
+    <string name="optimized_model_setting_size">۴۶۵ مگابایت</string>
+    <string name="settings_model_selection">انتخاب مدل</string>
+    <string name="settings_model_selection_text">مدل هوش مصنوعی</string>
+    <string name="settings_model_selection_description">مدلی را انتخاب کنید که بهترین تطابق با نیازهای شما دارد</string>
 </resources>

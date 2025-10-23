@@ -196,4 +196,12 @@
     <string name="standard_model_description">Bu, günlük kullanım için iyi çalışan daha hızlı, daha hafif seçenektir. Konuşmanızı hızla metne dönüştürür ve telefonunuzda fazla yer kaplamaz. Hızlı sonuçlar istiyorsanız ve birden fazla dil kullanıyorsanız mükemmeldir. Onu kompakt bir araba gibi düşünün - verimli ve işi halleder.</string>
     <string name="optimized_model_title">Optimize Edilmiş Model (Çok Dilli)</string>
     <string name="optimized_model_description">Bu, size mümkün olan en doğru transkriptleri veren daha güçlü seçenektir. Biraz daha uzun sürer ve daha fazla depolama kullanır, ancak özellikle aksan veya arka plan gürültüsü ile daha fazla kelimeyi doğru yakalar. Lüks bir araba gibi - daha büyük ve daha yavaş, ancak premium kalite sunar. Not: Hintçe/Güceratça desteklemiyor.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Daha hızlı performans ve daha küçük dosya boyutu\nTüm dilleri destekler</string>
+    <string name="optimized_model_setting_desc">Mevcut en yüksek doğruluk\nDaha büyük dosya boyutu, daha yavaş performans\nHintçe/Güceratça dışındaki tüm dilleri destekler</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">Model Seçimi</string>
+    <string name="settings_model_selection_text">AI Modeli</string>
+    <string name="settings_model_selection_description">İhtiyaçlarınıza en uygun modeli seçin</string>
 </resources>

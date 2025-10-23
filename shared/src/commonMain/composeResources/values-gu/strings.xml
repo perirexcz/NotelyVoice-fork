@@ -192,4 +192,12 @@
     <string name="standard_model_description">આ ઝડપી, હલકો વિકલ્પ છે જે રોજિંદા ઉપયોગ માટે સારી રીતે કામ કરે છે. તે તમારી વાણીને ઝડપથી ટેક્સ્ટમાં રૂપાંતરિત કરે છે અને તમારા ફોન પર વધુ જગ્યા લેતું નથી. જો તમને ઝડપી પરિણામો જોઈતા હોય અને બહુવિધ ભાષાઓનો ઉપયોગ કરતા હોવ તો સંપૂર્ણ. તેને કોમ્પેક્ટ કાર જેવું વિચારો - કાર્યક્ષમ અને કામ કરી દે છે.</string>
     <string name="optimized_model_title">ઑપ્ટિમાઇઝ્ડ મોડેલ (બહુભાષી)</string>
     <string name="optimized_model_description">આ વધુ શક્તિશાળી વિકલ્પ છે જે તમને શક્ય તેટલા સચોટ ટ્રાન્સક્રિપ્શન્સ આપે છે. તે થોડો વધુ સમય લે છે અને વધુ સ્ટોરેજનો ઉપયોગ કરે છે, પરંતુ ખાસ કરીને ઉચ્ચારણ અથવા પૃષ્ઠભૂમિ અવાજ સાથે વધુ શબ્દો યોગ્ય રીતે પકડે છે. લક્ઝરી કાર જેવું - મોટું અને ધીમું, પરંતુ પ્રીમિયમ ગુણવત્તા પ્રદાન કરે છે. નોંધ: હિન્દી/ગુજરાતીને સપોર્ટ કરતું નથી.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">ઝડપી કામગીરી અને નાનું ફાઇલ કદ\nબધી ભાષાઓને સપોર્ટ કરે છે</string>
+    <string name="optimized_model_setting_desc">સૌથી વધુ ઉપલબ્ધ ચોકસાઈ\nમોટું ફાઇલ કદ, ધીમી કામગીરી\nહિન્દી/ગુજરાતી સિવાયની બધી ભાષાઓને સપોર્ટ કરે છે</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">મોડલ પસંદગી</string>
+    <string name="settings_model_selection_text">AI મોડલ</string>
+    <string name="settings_model_selection_description">તમારી જરૂરિયાતોને શ્રેષ્ઠ રીતે અનુરૂપ મોડલ પસંદ કરો</string>
 </resources>

@@ -196,4 +196,12 @@
     <string name="standard_model_description">Ini adalah opsi yang lebih cepat dan ringan yang bekerja dengan baik untuk penggunaan sehari-hari. Ini dengan cepat mengubah ucapan Anda menjadi teks dan tidak memakan banyak ruang di ponsel Anda. Sempurna jika Anda menginginkan hasil cepat dan menggunakan beberapa bahasa. Anggap saja seperti mobil kompak - efisien dan menyelesaikan pekerjaan.</string>
     <string name="optimized_model_title">Model yang Dioptimalkan (Multibahasa)</string>
     <string name="optimized_model_description">Ini adalah opsi yang lebih kuat yang memberi Anda transkripsi paling akurat yang mungkin. Ini membutuhkan waktu sedikit lebih lama dan menggunakan lebih banyak penyimpanan, tetapi menangkap lebih banyak kata dengan benar, terutama dengan aksen atau kebisingan latar belakang. Seperti mobil mewah - lebih besar dan lebih lambat, tetapi memberikan kualitas premium. Catatan: tidak mendukung Hindi/Gujarat.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Kinerja lebih cepat dan ukuran file lebih kecil\nMendukung semua bahasa</string>
+    <string name="optimized_model_setting_desc">Akurasi tertinggi yang tersedia\nUkuran file lebih besar, kinerja lebih lambat\nMendukung semua bahasa kecuali Hindi/Gujarat</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">Pemilihan Model</string>
+    <string name="settings_model_selection_text">Model AI</string>
+    <string name="settings_model_selection_description">Pilih model yang paling sesuai dengan kebutuhan Anda</string>
 </resources>

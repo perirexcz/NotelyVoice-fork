@@ -195,4 +195,12 @@
     <string name="standard_model_description">Đây là tùy chọn nhanh hơn, nhẹ hơn hoạt động tốt cho việc sử dụng hàng ngày. Nó nhanh chóng chuyển đổi lời nói của bạn thành văn bản và không chiếm nhiều dung lượng trên điện thoại của bạn. Hoàn hảo nếu bạn muốn kết quả nhanh và sử dụng nhiều ngôn ngữ. Hãy nghĩ về nó như một chiếc xe nhỏ gọn - hiệu quả và hoàn thành công việc.</string>
     <string name="optimized_model_title">Mô hình được tối ưu hóa (đa ngôn ngữ)</string>
     <string name="optimized_model_description">Đây là tùy chọn mạnh mẽ hơn mang lại cho bạn bản sao chép chính xác nhất có thể. Nó mất nhiều thời gian hơn một chút và sử dụng nhiều bộ nhớ hơn, nhưng bắt được nhiều từ chính xác hơn, đặc biệt là với giọng địa phương hoặc tiếng ồn nền. Giống như một chiếc xe sang - to hơn và chậm hơn, nhưng mang lại chất lượng cao cấp. Lưu ý: không hỗ trợ tiếng Hindi/Gujarati.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Hiệu suất nhanh hơn và kích thước tệp nhỏ hơn\nHỗ trợ tất cả các ngôn ngữ</string>
+    <string name="optimized_model_setting_desc">Độ chính xác cao nhất có sẵn\nKích thước tệp lớn hơn, hiệu suất chậm hơn\nHỗ trợ tất cả các ngôn ngữ trừ tiếng Hindi/Gujarati</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">Lựa chọn mô hình</string>
+    <string name="settings_model_selection_text">Mô hình AI</string>
+    <string name="settings_model_selection_description">Chọn mô hình phù hợp nhất với nhu cầu của bạn</string>
 </resources>

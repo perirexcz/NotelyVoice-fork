@@ -196,4 +196,12 @@
     <string name="standard_model_description">Ito ang mas mabilis, mas magaan na opsyon na gumagana nang maayos para sa pang-araw-araw na paggamit. Mabilis nitong kino-convert ang iyong pagsasalita sa teksto at hindi kumukuha ng maraming espasyo sa iyong telepono. Perpekto kung gusto mo ng mabilis na resulta at gumagamit ng maraming wika. Isipin ito bilang isang compact na kotse - epektibo at natapos ang trabaho.</string>
     <string name="optimized_model_title">Na-optimize na Modelo (Multilinggwal)</string>
     <string name="optimized_model_description">Ito ang mas makapangyarihang opsyon na nagbibigay sa iyo ng pinakatumpak na mga transkripsyon na posible. Mas matagal ng kaunti at gumagamit ng mas maraming storage, ngunit nahuhuli ang mas maraming salita nang tama, lalo na sa mga accent o background noise. Tulad ng isang luxury na kotse - mas malaki at mas mabagal, ngunit naghahatid ng premium na kalidad. Tandaan: hindi sumusuporta sa Hindi/Gujarati.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Mas mabilis na performance at mas maliit na laki ng file\nSuportado ang lahat ng wika</string>
+    <string name="optimized_model_setting_desc">Pinakamataas na katumpakan na available\nMas malaking laki ng file, mas mabagal na performance\nSuportado ang lahat ng wika maliban sa Hindi/Gujarati</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">Pagpili ng Model</string>
+    <string name="settings_model_selection_text">AI Model</string>
+    <string name="settings_model_selection_description">Pumili ng model na pinakaangkop sa iyong pangangailangan</string>
 </resources>

@@ -196,4 +196,12 @@
     <string name="standard_model_description">Dette er det raskere, lettere alternativet som fungerer godt for daglig bruk. Den konverterer talen din raskt til tekst og tar ikke mye plass på telefonen din. Perfekt hvis du vil ha raske resultater og bruker flere språk. Tenk på den som en kompakt bil - effektiv og får jobben gjort.</string>
     <string name="optimized_model_title">Optimalisert modell (flerspråklig)</string>
     <string name="optimized_model_description">Dette er det kraftigere alternativet som gir deg de mest nøyaktige transkripsjonene mulig. Det tar litt lengre tid og bruker mer lagringsplass, men fanger flere ord riktig, spesielt med aksenter eller bakgrunnsstøy. Som en luksusbil - større og tregere, men leverer premium kvalitet. Merk: støtter ikke hindi/gujarati.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Raskere ytelse og mindre filstørrelse\nStøtter alle språk</string>
+    <string name="optimized_model_setting_desc">Høyeste tilgjengelige nøyaktighet\nStørre filstørrelse, tregere ytelse\nStøtter alle språk unntatt hindi/gujarati</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">Modellvalg</string>
+    <string name="settings_model_selection_text">AI-modell</string>
+    <string name="settings_model_selection_description">Velg modellen som passer best for dine behov</string>
 </resources>

@@ -196,4 +196,12 @@
     <string name="standard_model_description">Dies ist die schnellere, leichtere Option, die für den täglichen Gebrauch gut funktioniert. Es wandelt Ihre Sprache schnell in Text um und nimmt nicht viel Platz auf Ihrem Telefon ein. Perfekt, wenn Sie schnelle Ergebnisse wünschen und mehrere Sprachen verwenden. Stellen Sie es sich wie ein kompaktes Auto vor - effizient und erledigt die Arbeit.</string>
     <string name="optimized_model_title">Optimiertes Modell (mehrsprachig)</string>
     <string name="optimized_model_description">Dies ist die leistungsstärkere Option, die Ihnen die genauesten Transkriptionen bietet. Es dauert etwas länger und verwendet mehr Speicher, erfasst aber mehr Wörter korrekt, insbesondere bei Akzenten oder Hintergrundgeräuschen. Wie ein Luxusauto - größer und langsamer, aber liefert Premium-Qualität. Hinweis: unterstützt kein Hindi/Gujarati.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Schnellere Leistung und kleinere Dateigröße\nUnterstützt alle Sprachen</string>
+    <string name="optimized_model_setting_desc">Höchste verfügbare Genauigkeit\nGrößere Dateigröße, langsamere Leistung\nUnterstützt alle Sprachen außer Hindi/Gujarati</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">Modellauswahl</string>
+    <string name="settings_model_selection_text">KI-Modell</string>
+    <string name="settings_model_selection_description">Wählen Sie das Modell, das Ihren Anforderungen am besten entspricht</string>
 </resources>

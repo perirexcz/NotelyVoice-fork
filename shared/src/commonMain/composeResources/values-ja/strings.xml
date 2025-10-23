@@ -196,4 +196,12 @@
     <string name="standard_model_description">これは、日常的な使用に適した、より高速で軽量なオプションです。音声をすばやくテキストに変換し、携帯電話のスペースをあまり占有しません。迅速な結果が必要で、複数の言語を使用する場合に最適です。コンパクトカーのように考えてください - 効率的で仕事を成し遂げます。</string>
     <string name="optimized_model_title">最適化されたモデル（多言語）</string>
     <string name="optimized_model_description">これは、可能な限り最も正確な文字起こしを提供する、より強力なオプションです。少し時間がかかり、より多くのストレージを使用しますが、特にアクセントやバックグラウンドノイズがある場合に、より多くの単語を正確にキャッチします。高級車のように - より大きく、より遅いですが、プレミアム品質を提供します。注：ヒンディー語/グジャラート語はサポートしていません。</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">高速なパフォーマンスと小さいファイルサイズ\nすべての言語をサポート</string>
+    <string name="optimized_model_setting_desc">最高の精度\nファイルサイズが大きく、パフォーマンスが遅い\nヒンディー語/グジャラート語を除くすべての言語をサポート</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">モデルの選択</string>
+    <string name="settings_model_selection_text">AIモデル</string>
+    <string name="settings_model_selection_description">ニーズに最適なモデルを選択してください</string>
 </resources>

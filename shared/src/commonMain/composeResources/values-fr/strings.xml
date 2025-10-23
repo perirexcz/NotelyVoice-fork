@@ -197,4 +197,12 @@
     <string name="standard_model_description">Esta é a opción máis rápida e lixeira que funciona ben para o uso diario. Converte rapidamente a túa voz en texto e non ocupa moito espazo no teu teléfono. Perfecto se queres resultados rápidos e usas varios idiomas. Pensa nel como un coche compacto - eficiente e fai o traballo.</string>
     <string name="optimized_model_title">Modelo optimizado (multilingüe)</string>
     <string name="optimized_model_description">Esta é a opción máis potente que che ofrece as transcricións máis precisas posibles. Tarda un pouco máis e usa máis almacenamento, pero captura máis palabras correctamente, especialmente con acentos ou ruído de fondo. Como un coche de luxo - máis grande e máis lento, pero ofrece calidade premium. Nota: non admite hindi/gujarati.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Performances plus rapides et taille de fichier réduite\nPrend en charge toutes les langues</string>
+    <string name="optimized_model_setting_desc">Précision maximale disponible\nTaille de fichier plus importante, performances plus lentes\nPrend en charge toutes les langues sauf l\'hindi/le gujarati</string>
+    <string name="standard_model_setting_size">142 Mo</string>
+    <string name="optimized_model_setting_size">465 Mo</string>
+    <string name="settings_model_selection">Sélection du modèle</string>
+    <string name="settings_model_selection_text">Modèle d\'IA</string>
+    <string name="settings_model_selection_description">Choisissez le modèle qui correspond le mieux à vos besoins</string>
 </resources>

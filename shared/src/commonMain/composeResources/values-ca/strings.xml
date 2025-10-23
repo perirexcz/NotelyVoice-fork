@@ -195,4 +195,12 @@
     <string name="standard_model_description">Aquesta és l\'opció més ràpida i lleugera que funciona bé per a l\'ús diari. Converteix ràpidament la vostra parla en text i no ocupa gaire espai al vostre telèfon. Perfecte si voleu resultats ràpids i utilitzeu diversos idiomes. Penseu-hi com un cotxe compacte: eficient i fa la feina.</string>
     <string name="optimized_model_title">Model optimitzat (multilingüe)</string>
     <string name="optimized_model_description">Aquesta és l\'opció més potent que us ofereix les transcripcions més precises possibles. Triga una mica més i utilitza més espai d\'emmagatzematge, però captura més paraules correctament, especialment amb accents o soroll de fons. Com un cotxe de luxe: més gran i més lent, però ofereix qualitat premium. Nota: no admet hindi/gujarati.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Rendiment més ràpid i mida de fitxer més petita\nAdmet tots els idiomes</string>
+    <string name="optimized_model_setting_desc">Màxima precisió disponible\nMida de fitxer més gran, rendiment més lent\nAdmet tots els idiomes excepte hindi/gujarati</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">Selecció de model</string>
+    <string name="settings_model_selection_text">Model d\'IA</string>
+    <string name="settings_model_selection_description">Trieu el model que millor s\'adapti a les vostres necessitats</string>
 </resources>

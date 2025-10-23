@@ -196,4 +196,12 @@
     <string name="standard_model_description">Dit is de snellere, lichtere optie die goed werkt voor dagelijks gebruik. Het zet uw spraak snel om in tekst en neemt niet veel ruimte in beslag op uw telefoon. Perfect als u snelle resultaten wilt en meerdere talen gebruikt. Zie het als een compacte auto - efficiënt en krijgt het werk gedaan.</string>
     <string name="optimized_model_title">Geoptimaliseerd model (meertalig)</string>
     <string name="optimized_model_description">Dit is de krachtigere optie die u de meest nauwkeurige transcripties geeft. Het duurt iets langer en gebruikt meer opslagruimte, maar vangt meer woorden correct op, vooral met accenten of achtergrondgeluid. Zoals een luxe auto - groter en langzamer, maar levert premium kwaliteit. Let op: ondersteunt geen Hindi/Gujarati.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Snellere prestaties en kleinere bestandsgrootte\nOndersteunt alle talen</string>
+    <string name="optimized_model_setting_desc">Hoogste beschikbare nauwkeurigheid\nGrootere bestandsgrootte, langzamere prestaties\nOndersteunt alle talen behalve Hindi/Gujarati</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">Modelselectie</string>
+    <string name="settings_model_selection_text">AI-model</string>
+    <string name="settings_model_selection_description">Kies het model dat het beste bij uw behoeften past</string>
 </resources>

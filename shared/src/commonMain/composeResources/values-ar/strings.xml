@@ -200,4 +200,12 @@
     <string name="standard_model_description">هذا هو الخيار الأسرع والأخف الذي يعمل بشكل جيد للاستخدام اليومي. يقوم بتحويل كلامك إلى نص بسرعة ولا يشغل مساحة كبيرة على هاتفك. مثالي إذا كنت تريد نتائج سريعة وتستخدم لغات متعددة. فكر فيه مثل سيارة صغيرة - فعالة وتنجز المهمة.</string>
     <string name="optimized_model_title">النموذج المحسّن (متعدد اللغات)</string>
     <string name="optimized_model_description">هذا هو الخيار الأكثر قوة الذي يمنحك أدق النسخ الممكنة. يستغرق وقتًا أطول قليلاً ويستخدم مساحة تخزين أكبر، لكنه يلتقط المزيد من الكلمات بشكل صحيح، خاصة مع اللهجات أو الضوضاء في الخلفية. مثل سيارة فاخرة - أكبر وأبطأ، لكنها تقدم جودة ممتازة. ملاحظة: لا يدعم الهندية/الغوجاراتية.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">أداء أسرع وحجم ملف أصغر\nيدعم جميع اللغات</string>
+    <string name="optimized_model_setting_desc">أعلى دقة متاحة\nحجم ملف أكبر، أداء أبطأ\nيدعم جميع اللغات باستثناء الهندية/الغوجاراتية</string>
+    <string name="standard_model_setting_size">142 ميجابايت</string>
+    <string name="optimized_model_setting_size">465 ميجابايت</string>
+    <string name="settings_model_selection">اختيار النموذج</string>
+    <string name="settings_model_selection_text">نموذج الذكاء الاصطناعي</string>
+    <string name="settings_model_selection_description">اختر النموذج الذي يناسب احتياجاتك</string>
 </resources>

@@ -196,4 +196,12 @@
     <string name="standard_model_description">Esta é a opção mais rápida e leve que funciona bem para o uso diário. Converte rapidamente sua fala em texto e não ocupa muito espaço no seu telefone. Perfeito se você quer resultados rápidos e usa vários idiomas. Pense nele como um carro compacto - eficiente e faz o trabalho.</string>
     <string name="optimized_model_title">Modelo otimizado (multilíngue)</string>
     <string name="optimized_model_description">Esta é a opção mais poderosa que oferece as transcrições mais precisas possíveis. Leva um pouco mais de tempo e usa mais armazenamento, mas captura mais palavras corretamente, especialmente com sotaques ou ruído de fundo. Como um carro de luxo - maior e mais lento, mas oferece qualidade premium. Nota: não suporta hindi/gujarati.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Desempenho mais rápido e tamanho de arquivo menor\nSuporta todos os idiomas</string>
+    <string name="optimized_model_setting_desc">Maior precisão disponível\nTamanho de arquivo maior, desempenho mais lento\nSuporta todos os idiomas exceto hindi/gujarati</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">Seleção de modelo</string>
+    <string name="settings_model_selection_text">Modelo de IA</string>
+    <string name="settings_model_selection_description">Escolha o modelo que melhor atende às suas necessidades</string>
 </resources>

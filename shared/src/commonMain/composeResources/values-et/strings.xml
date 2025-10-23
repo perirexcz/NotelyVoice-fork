@@ -196,4 +196,12 @@
     <string name="standard_model_description">See on kiirem ja kergem valik, mis sobib igapäevaseks kasutamiseks. See teisendab su kõne kiiresti tekstiks ega võta telefonis palju ruumi. Ideaalne, kui soovid kiireid tulemusi ja kasutad mitut keelt. Mõtle sellele nagu kompaktsele autole - tõhus ja teeb töö ära.</string>
     <string name="optimized_model_title">Optimeeritud mudel (mitmekeelne)</string>
     <string name="optimized_model_description">See on võimsam valik, mis annab sulle kõige täpsemad võimalikud transkriptsioonid. See võtab veidi rohkem aega ja kasutab rohkem salvestusruumi, kuid tabab rohkem sõnu õigesti, eriti aktsendiga või taustamüra korral. Nagu luksusauto - suurem ja aeglasem, kuid pakub ülitasemel kvaliteeti. Märkus: ei toeta hindi/gudžarati keelt.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Kiirem jõudlus ja väiksem failisuurus\nToetab kõiki keeli</string>
+    <string name="optimized_model_setting_desc">Kõrgeim saadaolev täpsus\nSuurem failisuurus, aeglasem jõudlus\nToetab kõiki keeli peale hindi/gudžarati</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">Mudeli valik</string>
+    <string name="settings_model_selection_text">AI mudel</string>
+    <string name="settings_model_selection_description">Valige oma vajadustele sobiv mudel</string>
 </resources>

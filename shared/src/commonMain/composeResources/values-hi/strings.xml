@@ -196,4 +196,12 @@
     <string name="standard_model_description">यह तेज़, हल्का विकल्प है जो रोज़मर्रा के उपयोग के लिए अच्छी तरह से काम करता है। यह आपके भाषण को जल्दी से पाठ में बदल देता है और आपके फोन पर ज्यादा जगह नहीं लेता है। यदि आप त्वरित परिणाम चाहते हैं और कई भाषाओं का उपयोग करते हैं तो बिल्कुल सही। इसे एक कॉम्पैक्ट कार की तरह सोचें - कुशल और काम पूरा कर देती है।</string>
     <string name="optimized_model_title">अनुकूलित मॉडल (बहुभाषी)</string>
     <string name="optimized_model_description">यह अधिक शक्तिशाली विकल्प है जो आपको सबसे सटीक संभव प्रतिलेखन देता है। इसमें थोड़ा अधिक समय लगता है और अधिक स्टोरेज का उपयोग होता है, लेकिन यह विशेष रूप से उच्चारण या पृष्ठभूमि शोर के साथ अधिक शब्दों को सही ढंग से पकड़ता है। एक लक्जरी कार की तरह - बड़ी और धीमी, लेकिन प्रीमियम गुणवत्ता प्रदान करती है। नोट: हिंदी/गुजराती का समर्थन नहीं करता।</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">तेज़ प्रदर्शन और छोटा फ़ाइल आकार\nसभी भाषाओं का समर्थन करता है</string>
+    <string name="optimized_model_setting_desc">उपलब्ध उच्चतम सटीकता\nबड़ा फ़ाइल आकार, धीमा प्रदर्शन\nहिंदी/गुजराती को छोड़कर सभी भाषाओं का समर्थन करता है</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">मॉडल चयन</string>
+    <string name="settings_model_selection_text">AI मॉडल</string>
+    <string name="settings_model_selection_description">वह मॉडल चुनें जो आपकी आवश्यकताओं के लिए सबसे उपयुक्त हो</string>
 </resources>
