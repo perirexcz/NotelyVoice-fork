@@ -1,3 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="error">Chyba</string>
+    <string name="app_name">Notely Voice</string>
+    <string name="close">Zavřít</string>
+    <string name="cancel">Zrušit</string>
+    <string name="export">Export</string>
+    <string name="navigate">Navigovat</string>
+    <string name="ok">OK</string>
+    <string name="copy">Kopírovat</string>
+    <string name="top_bar_back">Zpět</string>
+    <string name="top_bar_notes">Notely Voice</string>
+    <string name="top_bar_menu">Menu</string>
+    <string name="top_bar_my_note">Moje poznámka</string>
+    <string name="top_bar_export_audio_folder">Export zvuku do složky</string>
+    <string name="top_bar_import_audio">Import zvuku</string>
+    <string name="top_bar_import_video">Import videa</string>
+    <string name="top_bar_export_as_pdf">Uložit jako PDF</string>
+    <string name="top_bar_export_as_txt">Uložit jako text</string>
 </resources>
