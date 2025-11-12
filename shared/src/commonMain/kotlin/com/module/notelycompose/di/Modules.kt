@@ -19,6 +19,8 @@ import com.module.notelycompose.notes.domain.UpdateNoteUseCase
 import com.module.notelycompose.notes.domain.mapper.NoteDomainMapper
 import com.module.notelycompose.notes.domain.mapper.TextFormatMapper
 import com.module.notelycompose.audio.presentation.AudioImportViewModel
+import com.module.notelycompose.export.presentation.ExportSelectionViewModel
+import com.module.notelycompose.modelDownloader.ModelSelection
 import com.module.notelycompose.notes.presentation.detail.NoteDetailScreenViewModel
 import com.module.notelycompose.notes.presentation.detail.TextEditorViewModel
 import com.module.notelycompose.notes.presentation.helpers.TextEditorHelper
@@ -47,6 +49,8 @@ val appModule = module {
             database = NoteDatabase(get())
         )
     }
+
+    factory { ModelSelection(get()) }
 
 }
 
@@ -77,6 +81,7 @@ val viewModelModule = module {
     viewModelOf(::AudioRecorderViewModel)
     viewModelOf(::AudioPlayerViewModel)
     viewModelOf(::AudioImportViewModel)
+    viewModelOf(::ExportSelectionViewModel)
 }
 
 val useCaseModule = module {

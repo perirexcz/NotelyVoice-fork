@@ -71,6 +71,7 @@ import com.module.notelycompose.modelDownloader.DownloaderEffect
 import com.module.notelycompose.modelDownloader.ModelDownloaderViewModel
 import com.module.notelycompose.audio.presentation.AudioImportViewModel
 import com.module.notelycompose.audio.ui.importing.ImportingAudioStateHost
+import com.module.notelycompose.modelDownloader.ModelSelection
 import com.module.notelycompose.notes.presentation.detail.TextEditorViewModel
 import com.module.notelycompose.notes.ui.share.ShareDialog
 import com.module.notelycompose.notes.ui.theme.LocalCustomColors
@@ -86,6 +87,7 @@ import com.module.notelycompose.resources.vectors.Images
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
+import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -100,7 +102,8 @@ fun NoteDetailScreen(
     downloaderViewModel: ModelDownloaderViewModel = koinViewModel(),
     platformViewModel: PlatformViewModel = koinViewModel(),
     audioImportViewModel: AudioImportViewModel = koinViewModel(),
-    editorViewModel: TextEditorViewModel
+    editorViewModel: TextEditorViewModel,
+    modelSelection: ModelSelection = koinInject()
 ) {
     val currentNoteId by editorViewModel.currentNoteId.collectAsStateWithLifecycle()
     val importingState by audioImportViewModel.importingAudioState.collectAsStateWithLifecycle()
@@ -110,6 +113,7 @@ fun NoteDetailScreen(
 
     val audioPlayerUiState = audioPlayerViewModel.uiState.collectAsStateWithLifecycle().value
         .let { audioPlayerViewModel.onGetUiState(it) }
+    val platformState by platformViewModel.state.collectAsStateWithLifecycle()
 
     var showFormatBar by remember { mutableStateOf(false) }
     val focusRequester = remember { FocusRequester() }
@@ -120,6 +124,7 @@ fun NoteDetailScreen(
     var isTextFieldFocused by remember { mutableStateOf(false) }
     var showDownloadQuestionDialog by remember { mutableStateOf(false) }
     var showExistingRecordConfirmDialog by remember { mutableStateOf(false) }
+    var showCopiedTooltip by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
         if (noteId.toLong() > 0L) {
@@ -164,12 +169,19 @@ fun NoteDetailScreen(
                 onShare = {
                     showShareDialog = true
                 },
+                onCopy = {
+                    platformViewModel.onCopy(editorState.content.text)
+                },
                 onExportAudio = {
                     platformViewModel.onExportAudio(editorState.recording.recordingPath)
                 },
                 onImportClick = {
                     audioPlayerViewModel.releasePlayer()
                     audioImportViewModel.importAudio()
+                },
+                onImportVideoClick = {
+                    audioPlayerViewModel.releasePlayer()
+                    audioImportViewModel.importVideo()
                 },
                 isRecordingExist = editorState.recording.isRecordingExist,
                 onExportTextAsTxt = {
@@ -260,7 +272,7 @@ fun NoteDetailScreen(
     if (showDownloadDialog) {
         LocalSoftwareKeyboardController.current?.hide()
         DownloaderDialog(
-            modifier = Modifier.height(100.dp),
+            transcriptionModel = downloaderUiState.selectedModel,
             downloaderUiState,
             onDismiss = { showDownloadDialog = false }
         )
@@ -269,11 +281,12 @@ fun NoteDetailScreen(
     if (showErrorDialog) {
         LocalSoftwareKeyboardController.current?.hide()
         AlertDialog(
-            modifier = Modifier.height(100.dp),
+            modifier = Modifier.height(120.dp),
             title = { Text(stringResource(resource = Res.string.download_dialog_error)) },
             onDismissRequest = { showErrorDialog = false },
             buttons = {
                 Button(
+                    modifier = Modifier.padding(vertical = 12.dp, horizontal = 24.dp),
                     onClick = {
                         showErrorDialog = false
                     },
@@ -290,7 +303,8 @@ fun NoteDetailScreen(
             },
             onCancel = {
                 showDownloadQuestionDialog = false
-            }
+            },
+            transcriptionModel = downloaderUiState.selectedModel
         )
     }
 
@@ -325,6 +339,22 @@ fun NoteDetailScreen(
         state = importingState,
         onSuccess = editorViewModel::onUpdateRecordingPath,
         onRelease = audioImportViewModel::releaseState
+    )
+
+    LaunchedEffect(platformState.copySuccess, showCopiedTooltip) {
+        if (platformState.copySuccess == true) {
+            showCopiedTooltip = true
+        }
+    }
+3
+    CopiedNotification(
+        visible = showCopiedTooltip,
+        onDismiss = {
+            showCopiedTooltip = false
+            platformViewModel.onClearCopyState()
+        },
+        modifier = Modifier
+            .padding(bottom = 52.dp)
     )
 }
 

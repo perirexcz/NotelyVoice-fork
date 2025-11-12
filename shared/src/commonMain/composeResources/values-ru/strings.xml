@@ -12,11 +12,12 @@
     <string name="top_bar_my_note">Моя заметка</string>
     <string name="top_bar_export_audio_folder">Экспорт аудио в папку</string>
     <string name="top_bar_import_audio">Импорт аудио</string>
+    <string name="top_bar_export_as_pdf">Экспорт текста в PDF</string>
     <string name="top_bar_export_as_txt">Экспортировать как текстовый файл</string>
     <!-- Delete Dialog -->
     <string name="confirmation">Подтвердить</string>
-    <string name="confirmation_text">Вы хотите удалить заметку?</string>
-    <string name="recording_confirmation_text">Вы уверены, что хотите удалить запись?</string>
+    <string name="confirmation_text">Вы хотите удалить заметку? Это действие нельзя отменить</string>
+    <string name="recording_confirmation_text">Вы уверены, что хотите удалить запись? Это действие нельзя отменить</string>
     <string name="confirmation_delete">Удалить</string>
     <string name="confirmation_cancel">Отменить</string>
     <string name="recording_replace_error">У вас уже есть сохраненная запись. Создание новой записи навсегда заменит ее. Вы хотите продолжить?</string>
@@ -48,7 +49,7 @@
     <!-- Date Selection -->
     <string name="note_detail_more_options">Дополнительно</string>
     <!-- Date Tab Bar -->
-    <string name="date_tab_bar_all">Все</string>
+    <string name="date_tab_bar_all">Все %1$s</string>
     <string name="date_tab_bar_starred">Отмеченные</string>
     <string name="date_tab_bar_voices">Голоса</string>
     <string name="date_tab_bar_recent">Недавние</string>
@@ -110,13 +111,16 @@
     <string name="share_audio_recording">Поделиться аудиозаписью</string>
     <!-- Download Dialog -->
     <string name="download_required">Требуется загрузка</string>
+    <string name="download_required_for_hindi">Требуется загрузка для хинди</string>
     <string name="for_accurate_transcription">Для точной транскрипции нам необходимо загрузить модель ИИ.</string>
     <string name="take_few_minutes">Это может занять несколько минут и требует стабильного интернет-соединения.</string>
-    <string name="file_size_approx">Размер файла: приблизительно 142МБ</string>
+    <string name="file_size_approx">Размер файла: приблизительно %1$s</string>
+    <string name="file_model_english">Многоязычная модель (поддерживает более 50 языков)</string>
+    <string name="file_model_hindi">Модель, оптимизированная для хинди</string>
     <string name="download">Загрузить</string>
     <!-- Settings Screen -->
     <string name="settings">Настройки</string>
-    <string name="customize_your_experience">Настройте свой опыт</string>
+    <string name="customize_your_experience">Прокрутите вниз, чтобы увидеть все настройки</string>
     <string name="language_and_region">Язык и регион</string>
     <string name="transcription_language">Язык транскрипции</string>
     <string name="language_used_for_voice_transcription">Язык, используемый для транскрипции голоса</string>
@@ -160,4 +164,49 @@
     <string name="accessibility_desc">Используйте ползунок для установки предпочитаемого размера основного текста для редактора заметок, настройте свой опыт.</string>
     <string name="accessibility_a">А</string>
     <string name="accessibility_default">По умолчанию 14 пт</string>
+    <!-- Batch Export feature -->
+    <string name="batch_export_ok">ОК</string>
+    <string name="batch_export_failed">Экспорт не удался</string>
+    <string name="batch_export_options">Параметры экспорта</string>
+    <string name="batch_export_select_formats">Выберите форматы для экспорта:</string>
+    <string name="batch_export_audio_files">Экспортировать аудиофайлы</string>
+    <string name="batch_export_txt_files">Экспортировать текст как файлы TXT</string>
+    <string name="batch_export_select_at_least_one_option">Пожалуйста, выберите хотя бы один вариант</string>
+    <string name="batch_export_title">Экспорт</string>
+    <string name="batch_export_no_selection_made">Выбор не сделан, пожалуйста, выберите элемент для экспорта</string>
+    <string name="batch_export_settings_title">Экспорт нескольких заметок</string>
+    <string name="batch_export_settings_description">ДОЛГО НАЖМИТЕ на любую карточку заметки, чтобы показать параметры экспорта в списке заметок</string>
+    <string name="batch_export_settings_how_to">Как экспортировать несколько заметок</string>
+    <string name="batch_export_settings_how_to_description_1">ДОЛГО НАЖМИТЕ на любую карточку заметки для входа в режим выбора, затем экспортируйте несколько заметок одновременно</string>
+    <string name="batch_export_settings_how_to_description_2">Долго нажмите на заметку</string>
+    <string name="batch_export_settings_how_to_description_3">Выберите заметки для экспорта</string>
+    <string name="batch_export_settings_how_to_description_4">Нажмите кнопку экспорта внизу</string>
+    <string name="batch_export_settings_how_to_1">1.</string>
+    <string name="batch_export_settings_how_to_2">2.</string>
+    <string name="batch_export_settings_how_to_3">3.</string>
+    <string name="batch_export_settings_error_occurred">произошла ошибка при экспорте</string>
+    <string name="batch_export_settings_no_folder_selected">Выбор папки отменен</string>
+    <!-- Import -->
+    <string name="import_failed_title">Импорт не удался</string>
+    <string name="top_bar_import_video">Импорт видео</string>
+    <string name="select_deselect_all">Выбрать все / Снять выбор</string>
+    <string name="copy">Копировать</string>
+    <string name="copied">Скопировано!</string>
+    <string name="question_mark">вопросительный знак</string>
+    <string name="ai_model_title">Что такое модель ИИ?</string>
+    <string name="ai_model_description">Модель ИИ подобна цифровому мозгу, который был обучен понимать речь и преобразовывать её в письменный текст. Разные модели имеют разные сильные стороны - некоторые быстрее, некоторые точнее. Выберите ту, которая соответствует вашим потребностям.</string>
+    <string name="standard_model_title">Стандартная модель (многоязычная)</string>
+    <string name="standard_model_description">Это более быстрый, лёгкий вариант, который хорошо работает для повседневного использования. Он быстро преобразует вашу речь в текст и не занимает много места на вашем телефоне. Идеально, если вам нужны быстрые результаты и вы используете несколько языков. Думайте о нём как о компактном автомобиле - эффективный и выполняет работу.</string>
+    <string name="optimized_model_title">Оптимизированная модель (многоязычная)</string>
+    <string name="optimized_model_description">Это более мощный вариант, который даёт вам максимально точные транскрипции. Он занимает немного больше времени и использует больше памяти, но правильно распознаёт больше слов, особенно с акцентами или фоновым шумом. Как роскошный автомобиль - больше и медленнее, но обеспечивает премиальное качество. Примечание: не поддерживает хинди/гуджарати.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Более быстрая работа и меньший размер файла\nПоддерживает все языки</string>
+    <string name="optimized_model_setting_desc">Максимальная доступная точность\nБольший размер файла, более медленная работа\nПоддерживает все языки, кроме хинди/гуджарати</string>
+    <string name="standard_model_setting_size">142 МБ</string>
+    <string name="optimized_model_setting_size">465 МБ</string>
+    <string name="settings_model_selection">Выбор модели</string>
+    <string name="settings_model_selection_text">Модель ИИ</string>
+    <string name="settings_model_selection_description">Выберите модель, которая лучше всего соответствует вашим потребностям</string>
+    <string name="export">Экспорт</string>
+    <string name="transcription_model_selection">Выбор модели</string>
 </resources>

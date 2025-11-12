@@ -12,11 +12,12 @@
     <string name="top_bar_my_note">Min anteckning</string>
     <string name="top_bar_export_audio_folder">Exportera ljud till mapp</string>
     <string name="top_bar_import_audio">Importera ljud</string>
+    <string name="top_bar_export_as_pdf">Exportera text som PDF</string>
     <string name="top_bar_export_as_txt">Exportera text som .txt</string>
     <!-- Delete Dialog -->
     <string name="confirmation">Bekräfta</string>
-    <string name="confirmation_text">Vill du ta bort anteckningen?</string>
-    <string name="recording_confirmation_text">Är du säker på att du vill ta bort inspelningen?</string>
+    <string name="confirmation_text">Vill du radera anteckningen? Denna åtgärd kan inte ångras</string>
+    <string name="recording_confirmation_text">Är du säker på att du vill radera inspelningen? Denna åtgärd kan inte ångras</string>
     <string name="confirmation_delete">Ta bort</string>
     <string name="confirmation_cancel">Avbryt</string>
     <string name="recording_replace_error">Du har redan en sparad inspelning. Att skapa en ny inspelning kommer att ersätta den permanent. Vill du fortsätta?</string>
@@ -48,7 +49,7 @@
     <!-- Date Selection -->
     <string name="note_detail_more_options">Fler alternativ</string>
     <!-- Date Tab Bar -->
-    <string name="date_tab_bar_all">Alla</string>
+    <string name="date_tab_bar_all">Alla %1$s</string>
     <string name="date_tab_bar_starred">Stjärnmarkerade</string>
     <string name="date_tab_bar_voices">Röster</string>
     <string name="date_tab_bar_recent">Senaste</string>
@@ -108,13 +109,16 @@
     <string name="share_audio_recording">Dela ljudinspelning</string>
     <!-- Download Dialog -->
     <string name="download_required">Nedladdning krävs</string>
+    <string name="download_required_for_hindi">Nedladdning krävs för hindi</string>
     <string name="for_accurate_transcription">För korrekt transkription behöver vi ladda ner AI-modellen.</string>
     <string name="take_few_minutes">Det här kan ta några minuter och kräver en stabil internetanslutning.</string>
-    <string name="file_size_approx">Filstorlek: cirka 142MB</string>
+    <string name="file_size_approx">Filstorlek: cirka %1$s</string>
+    <string name="file_model_english">Flerspråkig modell (stöder 50+ språk)</string>
+    <string name="file_model_hindi">Hindi-optimerad modell</string>
     <string name="download">Ladda ner</string>
     <!-- Settings Screen -->
     <string name="settings">Inställningar</string>
-    <string name="customize_your_experience">Anpassa din upplevelse</string>
+    <string name="customize_your_experience">Scrolla ner för att se alla inställningar</string>
     <string name="language_and_region">Språk &amp; Region</string>
     <string name="transcription_language">Transkriptionsspråk</string>
     <string name="language_used_for_voice_transcription">Språk som används för rösttranskription</string>
@@ -158,4 +162,50 @@
     <string name="accessibility_desc">Använd reglaget för att ställa in önskad skrivtextstorlek för anteckningsredigeraren, anpassa din upplevelse.</string>
     <string name="accessibility_a">A</string>
     <string name="accessibility_default">Standard är 14 pt</string>
+    <!-- Batch Export feature -->
+    <string name="batch_export_ok">OK</string>
+    <string name="batch_export_failed">Export misslyckades</string>
+    <string name="batch_export_options">Exportalternativ</string>
+    <string name="batch_export_select_formats">Välj de format du vill exportera:</string>
+    <string name="batch_export_audio_files">Exportera ljudfiler</string>
+    <string name="batch_export_txt_files">Exportera text som TXT-filer</string>
+    <string name="batch_export_select_at_least_one_option">Välj minst ett alternativ</string>
+    <string name="batch_export_title">Exportera</string>
+    <string name="batch_export_no_selection_made">Inget val gjort, välj ett objekt att exportera</string>
+    <string name="batch_export_settings_title">Exportera flera anteckningar</string>
+    <string name="batch_export_settings_description">TRYCK LÄNGE på valfritt anteckningskort för att visa exportalternativ i anteckningslistan</string>
+    <string name="batch_export_settings_how_to">Hur man exporterar flera anteckningar</string>
+    <string name="batch_export_settings_how_to_description_1">TRYCK LÄNGE på valfritt anteckningskort för att gå in i valläge och exportera sedan flera anteckningar på en gång</string>
+    <string name="batch_export_settings_how_to_description_2">Tryck länge på anteckning</string>
+    <string name="batch_export_settings_how_to_description_3">Välj anteckningar att exportera</string>
+    <string name="batch_export_settings_how_to_description_4">Tryck på exportknappen längst ner</string>
+    <string name="batch_export_settings_how_to_1">1.</string>
+    <string name="batch_export_settings_how_to_2">2.</string>
+    <string name="batch_export_settings_how_to_3">3.</string>
+    <string name="batch_export_settings_error_occurred">ett fel inträffade vid export</string>
+    <string name="batch_export_settings_no_folder_selected">Mappval avbröts</string>
+    <!-- Import -->
+    <string name="import_failed_title">Import misslyckades</string>
+    <string name="ok">OK</string>
+    <string name="select_deselect_all">Markera / Avmarkera alla</string>
+    <string name="top_bar_import_video">Importera video</string>
+    <string name="question_mark">frågetecken</string>
+    <string name="ai_model_title">Vad är en AI-modell?</string>
+    <string name="ai_model_description">En AI-modell är som en digital hjärna som har tränats för att förstå tal och konvertera det till skriven text. Olika modeller har olika styrkor - vissa är snabbare, vissa är mer exakta. Välj den som matchar dina behov.</string>
+    <string name="standard_model_title">Standardmodell (flerspråkig)</string>
+    <string name="standard_model_description">Det här är det snabbare, lättare alternativet som fungerar bra för daglig användning. Den konverterar snabbt ditt tal till text och tar inte upp mycket utrymme på din telefon. Perfekt om du vill ha snabba resultat och använder flera språk. Tänk på den som en kompakt bil - effektiv och får jobbet gjort.</string>
+    <string name="optimized_model_title">Optimerad modell (flerspråkig)</string>
+    <string name="optimized_model_description">Det här är det kraftfullare alternativet som ger dig de mest exakta möjliga transkriptionerna. Den tar lite längre tid och använder mer lagring, men fångar fler ord korrekt, särskilt med accenter eller bakgrundsljud. Som en lyxbil - större och långsammare, men levererar premiumkvalitet. Obs: stöder inte hindi/gujarati.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Snabbare prestanda och mindre filstorlek\nStöder alla språk</string>
+    <string name="optimized_model_setting_desc">Högsta tillgängliga noggrannhet\nStörre filstorlek, långsammare prestanda\nStöder alla språk utom hindi/gujarati</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">Modellval</string>
+    <string name="settings_model_selection_text">AI-modell</string>
+    <string name="settings_model_selection_description">Välj den modell som bäst passar dina behov</string>
+    <string name="export">Exportera</string>
+    <string name="copy">Kopiera</string>
+    <string name="copied">Kopierad!</string>
+    <string name="transcription_model_selection">Modellval</string>
 </resources>

@@ -12,11 +12,12 @@
     <string name="top_bar_my_note">La Mia Nota</string>
     <string name="top_bar_export_audio_folder">Esporta Audio nella Cartella</string>
     <string name="top_bar_import_audio">Importa Audio</string>
+    <string name="top_bar_export_as_pdf">Esporta testo come PDF</string>
     <string name="top_bar_export_as_txt">Esporta Testo come .txt</string>
     <!-- Delete Dialog -->
     <string name="confirmation">Conferma</string>
-    <string name="confirmation_text">Vuoi eliminare la nota?</string>
-    <string name="recording_confirmation_text">Sei sicuro di voler eliminare la registrazione?</string>
+    <string name="confirmation_text">Vuoi eliminare la nota? Questa azione non può essere annullata</string>
+    <string name="recording_confirmation_text">Sei sicuro di voler eliminare la registrazione? Questa azione non può essere annullata</string>
     <string name="confirmation_delete">Elimina</string>
     <string name="confirmation_cancel">Annulla</string>
     <string name="recording_replace_error">Hai già una registrazione salvata. Creare una nuova registrazione la sostituirà permanentemente. Vuoi continuare?</string>
@@ -48,7 +49,7 @@
     <!-- Date Selection -->
     <string name="note_detail_more_options">Altre opzioni</string>
     <!-- Date Tab Bar -->
-    <string name="date_tab_bar_all">Tutte</string>
+    <string name="date_tab_bar_all">Tutte %1$s</string>
     <string name="date_tab_bar_starred">Preferite</string>
     <string name="date_tab_bar_voices">Voci</string>
     <string name="date_tab_bar_recent">Recenti</string>
@@ -108,13 +109,16 @@
     <string name="share_audio_recording">Condividi Registrazione Audio</string>
     <!-- Download Dialog -->
     <string name="download_required">Download Richiesto</string>
+    <string name="download_required_for_hindi">Download richiesto per l'hindi</string>
     <string name="for_accurate_transcription">Per una trascrizione accurata, dobbiamo scaricare il modello AI.</string>
     <string name="take_few_minutes">Questo potrebbe richiedere alcuni minuti e necessita di una connessione internet stabile.</string>
-    <string name="file_size_approx">Dimensione file: circa 142MB</string>
+    <string name="file_size_approx">Dimensione file: circa %1$s</string>
+    <string name="file_model_english">Modello multilingue (supporta oltre 50 lingue)</string>
+    <string name="file_model_hindi">Modello ottimizzato per l'hindi</string>
     <string name="download">Scarica</string>
     <!-- Settings Screen -->
     <string name="settings">Impostazioni</string>
-    <string name="customize_your_experience">Personalizza la tua esperienza</string>
+    <string name="customize_your_experience">Scorri verso il basso per vedere tutte le impostazioni</string>
     <string name="language_and_region">Lingua &amp; Regione</string>
     <string name="transcription_language">Lingua di Trascrizione</string>
     <string name="language_used_for_voice_transcription">Lingua usata per la trascrizione vocale</string>
@@ -158,4 +162,46 @@
     <string name="accessibility_desc">Usa il cursore per impostare la dimensione del testo di scrittura preferita per l\'editor delle note, personalizza la tua esperienza.</string>
     <string name="accessibility_a">A</string>
     <string name="accessibility_default">Il predefinito è 14 pt</string>
+    <!-- Batch Export feature -->
+    <string name="batch_export_ok">OK</string>
+    <string name="batch_export_failed">Esportazione non riuscita</string>
+    <string name="batch_export_options">Opzioni di esportazione</string>
+    <string name="batch_export_select_formats">Seleziona i formati che desideri esportare:</string>
+    <string name="batch_export_audio_files">Esporta file audio</string>
+    <string name="batch_export_txt_files">Esporta testo come file TXT</string>
+    <string name="batch_export_select_at_least_one_option">Seleziona almeno un\'opzione</string>
+    <string name="batch_export_title">Esporta</string>
+    <string name="batch_export_no_selection_made">Nessuna selezione effettuata, seleziona un elemento da esportare</string>
+    <string name="batch_export_settings_title">Esporta più note</string>
+    <string name="batch_export_settings_description">TIENI PREMUTA qualsiasi scheda nota per mostrare le opzioni di esportazione nell\'elenco delle note</string>
+    <string name="batch_export_settings_how_to">Come esportare più note</string>
+    <string name="batch_export_settings_how_to_description_1">TIENI PREMUTA qualsiasi scheda nota per entrare in modalità selezione, quindi esporta più note contemporaneamente</string>
+    <string name="batch_export_settings_how_to_description_2">Tieni premuta la nota</string>
+    <string name="batch_export_settings_how_to_description_3">Seleziona le note da esportare</string>
+    <string name="batch_export_settings_how_to_description_4">Tocca il pulsante di esportazione in basso</string>
+    <string name="batch_export_settings_how_to_1">1.</string>
+    <string name="batch_export_settings_how_to_2">2.</string>
+    <string name="batch_export_settings_how_to_3">3.</string>
+    <string name="batch_export_settings_error_occurred">si è verificato un errore durante l\'esportazione</string>
+    <string name="batch_export_settings_no_folder_selected">Selezione cartella annullata</string>
+    <!-- Import -->
+    <string name="import_failed_title">Importazione non riuscita</string>
+    <string name="ok">OK</string>
+    <string name="select_deselect_all">Seleziona / Deseleziona tutto</string>
+    <string name="top_bar_import_video">Importa video</string>
+    <string name="question_mark">punto interrogativo</string>
+    <string name="ai_model_title">Cos\'è un modello di IA?</string>
+    <string name="ai_model_description">Un modello di IA è come un cervello digitale che è stato addestrato a comprendere il parlato e convertirlo in testo scritto. Modelli diversi hanno punti di forza diversi - alcuni sono più veloci, alcuni sono più precisi. Scegli quello che corrisponde alle tue esigenze.</string>
+    <string name="standard_model_title">Modello standard (multilingue)</string>
+    <string name="standard_model_description">Questa è l\'opzione più veloce e leggera che funziona bene per l\'uso quotidiano. Converte rapidamente il tuo parlato in testo e non occupa molto spazio sul tuo telefono. Perfetto se vuoi risultati rapidi e usi più lingue. Pensalo come un\'auto compatta - efficiente e fa il lavoro.</string>
+    <string name="optimized_model_title">Modello ottimizzato (multilingue)</string>
+    <string name="optimized_model_description">Questa è l\'opzione più potente che ti offre le trascrizioni più accurate possibili. Ci vuole un po\' più di tempo e usa più spazio di archiviazione, ma cattura più parole correttamente, specialmente con accenti o rumore di fondo. Come un\'auto di lusso - più grande e più lenta, ma offre qualità premium. Nota: non supporta hindi/gujarati.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Prestazioni più veloci e dimensioni file ridotte\nSupporta tutte le lingue</string>
+    <string name="optimized_model_setting_desc">Massima precisione disponibile\nDimensioni file maggiori, prestazioni più lente\nSupporta tutte le lingue tranne hindi/gujarati</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">Selezione modello</string>
+    <string name="settings_model_selection_text">Modello IA</string>
+    <string name="settings_model_selection_description">Scegli il modello più adatto alle tue esigenze</string>
 </resources>
