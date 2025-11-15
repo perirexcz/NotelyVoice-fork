@@ -113,6 +113,7 @@ fun NoteDetailScreen(
 
     val audioPlayerUiState = audioPlayerViewModel.uiState.collectAsStateWithLifecycle().value
         .let { audioPlayerViewModel.onGetUiState(it) }
+    val platformState by platformViewModel.state.collectAsStateWithLifecycle()
 
     var showFormatBar by remember { mutableStateOf(false) }
     val focusRequester = remember { FocusRequester() }
@@ -123,6 +124,7 @@ fun NoteDetailScreen(
     var isTextFieldFocused by remember { mutableStateOf(false) }
     var showDownloadQuestionDialog by remember { mutableStateOf(false) }
     var showExistingRecordConfirmDialog by remember { mutableStateOf(false) }
+    var showCopiedTooltip by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
         if (noteId.toLong() > 0L) {
@@ -167,12 +169,19 @@ fun NoteDetailScreen(
                 onShare = {
                     showShareDialog = true
                 },
+                onCopy = {
+                    platformViewModel.onCopy(editorState.content.text)
+                },
                 onExportAudio = {
                     platformViewModel.onExportAudio(editorState.recording.recordingPath)
                 },
                 onImportClick = {
                     audioPlayerViewModel.releasePlayer()
                     audioImportViewModel.importAudio()
+                },
+                onImportVideoClick = {
+                    audioPlayerViewModel.releasePlayer()
+                    audioImportViewModel.importVideo()
                 },
                 isRecordingExist = editorState.recording.isRecordingExist,
                 onExportTextAsTxt = {
@@ -330,6 +339,22 @@ fun NoteDetailScreen(
         state = importingState,
         onSuccess = editorViewModel::onUpdateRecordingPath,
         onRelease = audioImportViewModel::releaseState
+    )
+
+    LaunchedEffect(platformState.copySuccess, showCopiedTooltip) {
+        if (platformState.copySuccess == true) {
+            showCopiedTooltip = true
+        }
+    }
+3
+    CopiedNotification(
+        visible = showCopiedTooltip,
+        onDismiss = {
+            showCopiedTooltip = false
+            platformViewModel.onClearCopyState()
+        },
+        modifier = Modifier
+            .padding(bottom = 52.dp)
     )
 }
 

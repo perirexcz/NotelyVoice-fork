@@ -16,8 +16,8 @@
     <string name="top_bar_export_as_txt">Ekspordi tekstifailina</string>
     <!-- Delete Dialog -->
     <string name="confirmation">Kinnita</string>
-    <string name="confirmation_text">Kas sa soovid selle märke kustutada?</string>
-    <string name="recording_confirmation_text">Kas sa oled kindel, et soovid selle salvestise kustutada?</string>
+    <string name="confirmation_text">Kas soovite märkuse kustutada? Seda toimingut ei saa tagasi võtta</string>
+    <string name="recording_confirmation_text">Kas olete kindel, et soovite salvestuse kustutada? Seda toimingut ei saa tagasi võtta</string>
     <string name="confirmation_delete">Kustuta</string>
     <string name="confirmation_cancel">Katkesta</string>
     <string name="recording_replace_error">Sa oled juba ühe salvestise teinud. Uue tegemisel asendatakse too jäädavalt. Kas soovid jätkata?</string>
@@ -49,7 +49,7 @@
     <!-- Date Selection -->
     <string name="note_detail_more_options">Lisavalikud</string>
     <!-- Date Tab Bar -->
-    <string name="date_tab_bar_all">Kõik</string>
+    <string name="date_tab_bar_all">Kõik %1$s</string>
     <string name="date_tab_bar_starred">Tähekesega märgitud</string>
     <string name="date_tab_bar_voices">Hääled</string>
     <string name="date_tab_bar_recent">Hiljutised</string>
@@ -118,7 +118,7 @@
     <string name="download">Laadi alla</string>
     <!-- Settings Screen -->
     <string name="settings">Seadistused</string>
-    <string name="customize_your_experience">Kohanda kasutajaliides selliseks, nagu soovid</string>
+    <string name="customize_your_experience">Kõikide seadistuste vaatamiseks keri alla</string>
     <string name="language_and_region">Keel ja piirkond</string>
     <string name="transcription_language">Ümberkirjutuse keel</string>
     <string name="language_used_for_voice_transcription">Heli ümberkirjutuseks kasutatud keel</string>
@@ -162,4 +162,50 @@
     <string name="accessibility_desc">Kasutades liugurvalijat, vali enda jaoks sobilik põhiteksti suurus.</string>
     <string name="accessibility_a">A</string>
     <string name="accessibility_default">Vaikimisi suurus on 14 pt</string>
+    <!-- Batch Export feature -->
+    <string name="batch_export_ok">OK</string>
+    <string name="batch_export_failed">Eksport ebaõnnestus</string>
+    <string name="batch_export_options">Ekspordi valikud</string>
+    <string name="batch_export_select_formats">Valige vormingud, mida soovite eksportida:</string>
+    <string name="batch_export_audio_files">Ekspordi helifailid</string>
+    <string name="batch_export_txt_files">Ekspordi tekst TXT-failidena</string>
+    <string name="batch_export_select_at_least_one_option">Palun valige vähemalt üks valik</string>
+    <string name="batch_export_title">Eksport</string>
+    <string name="batch_export_no_selection_made">Valikut ei tehtud, palun valige eksportimiseks üksus</string>
+    <string name="batch_export_settings_title">Ekspordi mitu märkust</string>
+    <string name="batch_export_settings_description">VAJUTAGE PIKALT mis tahes märkuse kaarti, et kuvada ekspordi valikud märkuste loendis</string>
+    <string name="batch_export_settings_how_to">Kuidas eksportida mitut märkust</string>
+    <string name="batch_export_settings_how_to_description_1">VAJUTAGE PIKALT mis tahes märkuse kaarti, et siseneda valikurežiimi, seejärel eksportige mitu märkust korraga</string>
+    <string name="batch_export_settings_how_to_description_2">Vajutage pikalt märkust</string>
+    <string name="batch_export_settings_how_to_description_3">Valige eksportimiseks märkused</string>
+    <string name="batch_export_settings_how_to_description_4">Puudutage ekspordi nuppu all</string>
+    <string name="batch_export_settings_how_to_1">1.</string>
+    <string name="batch_export_settings_how_to_2">2.</string>
+    <string name="batch_export_settings_how_to_3">3.</string>
+    <string name="batch_export_settings_error_occurred">eksportimisel tekkis viga</string>
+    <string name="batch_export_settings_no_folder_selected">Kausta valik tühistati</string>
+    <!-- Import -->
+    <string name="import_failed_title">Import ebaõnnestus</string>
+    <string name="export">Ekspordi</string>
+    <string name="ok">Sobib</string>
+    <string name="top_bar_import_video">Impordi video</string>
+    <string name="select_deselect_all">Vali kõik / Eemalda valik</string>
+    <string name="copy">Kopeeri</string>
+    <string name="copied">Kopeeritud!</string>
+    <string name="transcription_model_selection">Mudeli valik</string>
+    <string name="question_mark">küsimärk</string>
+    <string name="ai_model_title">Mis on tehisaru mudel?</string>
+    <string name="ai_model_description">AI mudel on nagu digitaalne aju, mis on koolitatud kõnet mõistma ja seda kirjalikuks tekstiks teisendama. Erinevatel mudelitel on erinevad tugevused - mõned on kiiremad, mõned täpsemad. Vali see, mis sobib sinu vajadustega.</string>
+    <string name="standard_model_title">Standardmudel (mitmekeelne)</string>
+    <string name="standard_model_description">See on kiirem ja kergem valik, mis sobib igapäevaseks kasutamiseks. See teisendab su kõne kiiresti tekstiks ega võta telefonis palju ruumi. Ideaalne, kui soovid kiireid tulemusi ja kasutad mitut keelt. Mõtle sellele nagu kompaktsele autole - tõhus ja teeb töö ära.</string>
+    <string name="optimized_model_title">Optimeeritud mudel (mitmekeelne)</string>
+    <string name="optimized_model_description">See on võimsam valik, mis annab sulle kõige täpsemad võimalikud transkriptsioonid. See võtab veidi rohkem aega ja kasutab rohkem salvestusruumi, kuid tabab rohkem sõnu õigesti, eriti aktsendiga või taustamüra korral. Nagu luksusauto - suurem ja aeglasem, kuid pakub ülitasemel kvaliteeti. Märkus: ei toeta hindi/gudžarati keelt.</string>
+    <!-- settings -->
+    <string name="standard_model_setting_desc">Kiirem jõudlus ja väiksem failisuurus\nToetab kõiki keeli</string>
+    <string name="optimized_model_setting_desc">Kõrgeim saadaolev täpsus\nSuurem failisuurus, aeglasem jõudlus\nToetab kõiki keeli peale hindi/gudžarati</string>
+    <string name="standard_model_setting_size">142 MB</string>
+    <string name="optimized_model_setting_size">465 MB</string>
+    <string name="settings_model_selection">Mudeli valik</string>
+    <string name="settings_model_selection_text">Tehisaru mudel</string>
+    <string name="settings_model_selection_description">Vali mudel, mis parimal viisil sobib sinu vajadustega</string>
 </resources>

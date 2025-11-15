@@ -42,6 +42,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.module.notelycompose.modelDownloader.FARSI
+import com.module.notelycompose.modelDownloader.OPTIMIZED_MODEL_SELECTION
+import com.module.notelycompose.modelDownloader.STANDARD_MODEL_SELECTION
 import com.module.notelycompose.notes.ui.detail.AndroidNoteTopBar
 import com.module.notelycompose.notes.ui.detail.IOSNoteTopBar
 import com.module.notelycompose.notes.ui.theme.LocalCustomColors
@@ -61,11 +64,13 @@ val languageCodeMap = mapOf(
     "ar" to "Arabic",
     "ca" to "Catalan",
     "zh" to "Chinese",
+    "cs" to "Czech",
     "nl" to "Dutch",
     "fi" to "Finnish",
     "fr" to "French",
     "gl" to "Galician",
     "de" to "German",
+    "gu" to "Gujarati",
     "hi" to "Hindi",
     "id" to "Indonesian",
     "it" to "Italian",
@@ -73,6 +78,8 @@ val languageCodeMap = mapOf(
     "ko" to "Korean",
     "ms" to "Malay",
     "no" to "Norwegian",
+    "sk" to "Slovak",
+    "fa" to "Persian (Farsi)",
     "pl" to "Polish",
     "pt" to "Portuguese",
     "ru" to "Russian",
@@ -82,6 +89,7 @@ val languageCodeMap = mapOf(
     "th" to "Thai",
     "tr" to "Turkish",
     "uk" to "Ukrainian",
+    "ur" to "Urdu",
     "vi" to "Vietnamese",
     "auto" to "Auto detect (less accurate)"
 )
@@ -230,6 +238,9 @@ fun LanguageSelectionScreen(
                                     .clickable {
                                         coroutineScope.launch {
                                             preferencesRepository.setDefaultTranscriptionLanguage(languageEntry.key)
+                                            if(languageEntry.key == FARSI) {
+                                                preferencesRepository.setModelSelection(OPTIMIZED_MODEL_SELECTION)
+                                            }
                                         }
                                         navigateBack()
                                     },
