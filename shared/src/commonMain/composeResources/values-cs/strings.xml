@@ -22,8 +22,6 @@
     <string name="confirmation_text">Chcete tuto poznámku smazat? Tuto akci nelze vzít zpět</string>
 
     <!-- Delete Dialog -->
-    <string name="confirmation">Potvrdit</string>
-    <string name="confirmation_text">Chcete tuto poznámku smazat? Tuto akci nelze vzít zpět</string>
     <string name="recording_confirmation_text">Opravdu chcete smazat nahrávku? Tuto akci nelze vrátit zpět</string>
     <string name="confirmation_delete">Smazat</string>
     <string name="confirmation_cancel">Zrušit</string>
